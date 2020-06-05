@@ -1,0 +1,5 @@
+.vscode/
+build/
+imgui.ini
+build-rel/
+build-perf/
