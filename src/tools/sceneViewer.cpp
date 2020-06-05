@@ -258,6 +258,11 @@ main(int argc, char const* argv[])
         ImGui::DragFloat3("Cam Pos", &camera.position().x);
         ImGui::SliderFloat("Horizontal Angle", &angleH, 0, 360);
         ImGui::SliderFloat("Vertical Angle", &angleV, -89, +89);
+        if (ImGui::Button("Reset")) {
+          angleH = 45;
+          angleV = 0;
+          camera = BasicCamera(angleH, angleV, initalCameraPos);
+        }
       }
 
       if (ImGui::CollapsingHeader("LOD")) {
